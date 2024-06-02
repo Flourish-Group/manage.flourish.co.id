@@ -1,11 +1,11 @@
-// routes/homeRoutes.mjs
+// routes/loginRoutes.mjs
 import express from 'express';
 const router = express.Router();
 
-import { renderUserIndex } from '../controllers/userController.mjs';
+import { loginRender } from '../controllers/authController.mjs';
 
 router.get('/', (req, res) => {
-    renderUserIndex(req, res);
+    loginRender(req, res);
 });
 
 export default router;
