@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v13.1.1 (64 bit)
-MySQL - 10.4.6-MariaDB : Database - db_cms
+MySQL - 10.4.6-MariaDB : Database - db_flourish_
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 10.4.6-MariaDB : Database - db_cms
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_cms` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_flourish_` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `db_cms`;
+USE `db_flourish_`;
 
 /*Table structure for table `logs` */
 
