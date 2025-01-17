@@ -10,6 +10,8 @@ import loginRoutes from './routes/loginRoutes.mjs';
 import authRoutes from './routes/authRoutes.mjs';
 import userRoutes from './routes/userRoutes.mjs';
 import dashboardRoutes from './routes/homeRoutes.mjs';
+import documentationApiRoutes from './routes/documentationRoutes.mjs';
+import homeAdminRoutes from './routes/homeAdminRoutes.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: join(__dirname, '.env') });
@@ -39,12 +41,15 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
 app.use('/', dashboardRoutes);
 app.use('/users', userRoutes);
 app.use('/login', loginRoutes);
-app.use('/thor', ensureAuthenticated, (req, res) => {
-  res.send('<h1>Welcome to the Dashboard</h1>');
-});
+
+app.use('/api/documentation', documentationApiRoutes);
+
+app.use('/thor', ensureAuthenticated, homeAdminRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

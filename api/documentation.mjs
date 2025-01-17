@@ -1,10 +1,12 @@
 import express from 'express';
 import path from 'path';
+import { renderDocumentationPage } from '../views/login.mjs';
 
-const router = express.Router();
+const getAllDocumentationController = async (req, res) => {
+  const pageContent = renderDocumentationPage();
+      res.send(pageContent);
+  };
 
-router.get('/', (req, res) => {
-  res.sendFile('documentation.html', { root: path.resolve('api') });
-});
-
-export default router;
+export {
+  getAllDocumentationController,
+};
